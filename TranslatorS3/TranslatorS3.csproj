@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\ScriptEditor\ScriptEditor.csproj" />
+    <ProjectReference Include="..\ConfigView\ConfigView.csproj" />
+    <ProjectReference Include="..\ConsoleWindow\ConsoleWindow.csproj" />
+    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\ErrorPanel\ErrorPanel.csproj" />
+    <ProjectReference Include="..\Executor\Executor.csproj" />
+    <ProjectReference Include="..\GrammarParser\GrammarParser.csproj" />
+    <ProjectReference Include="..\LogView\LogView.csproj" />
+    <ProjectReference Include="..\PredescenceTableParser\PredescenceTableParser.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+</Project>

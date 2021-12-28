@@ -1,0 +1,39 @@
+﻿<Window x:Class="TranslatorS3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TranslatorS3"
+        xmlns:scriptEditor="clr-namespace:ScriptEditor;assembly=ScriptEditor"
+        xmlns:errorPanel="clr-namespace:ErrorPanel;assembly=ErrorPanel"
+        mc:Ignorable="d"
+        Title="Translator" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="31*"/>
+        </Grid.RowDefinitions>
+
+        <Menu>
+            <MenuItem Header="File">
+                <MenuItem Header="New" Click="NewFile_Click"/>
+                <MenuItem Header="Open" Click="OpenFile_Click"/>
+                <MenuItem Header="Save" Click="SaveFile_Click"/>
+            </MenuItem>
+            <MenuItem Header="Config" Click="ShowConfiguration_Click"/>
+            <MenuItem Header="Logger" Click="ShowLogger_Click"/>
+            <!--<MenuItem Header="StepOver" Click="StepOver_Click"/>-->
+            <MenuItem Header="Run" Click="Run_Click"/>
+        </Menu>
+
+        <scriptEditor:CoolEditor Name="scriptEditor" Grid.Row="1"/>
+        
+
+        <GridSplitter Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="3" Background="Black"/>
+
+        <errorPanel:ErrorPanel Name="errorPanel" Grid.Row="3"/>
+
+    </Grid>
+</Window>
